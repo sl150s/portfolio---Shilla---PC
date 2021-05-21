@@ -1,0 +1,71 @@
+호텔사이트 참고 사이트 
+
+
+http://preview.webmaker21.kr/nhvenezia/A/6
+방소개 
+
+
+http://preview.webmaker21.kr/soonsoo
+메인
+
+
+
+http://preview.webmaker21.kr/nhvenezia/A
+메인
+
+http://hymedi.webmaker21.kr/
+메인 페이지로 참고
+
+
+gnaj.dothome.co.kr
+
+메인(1page)+서브 =7
+
+ 
+
+- 호텔신라 소개 : 개요(summary), 수상이력(Award)
+
+- 신라리워즈 : 회원특전(perks) , 
+               포인트 안내 point.html
+
+- 예약: 1. 다이닝예약 (라연,더파크뷰,콘티넨탈) dining
+          2. 객실예약 (Deluxe, Business Deluxe,Superior Suite)  room
+
+- 갤러리 ​ gallery.html
+
+
+
+
+
+사진 사이 margin 10
+각 사진 width 420px
+
+
+
+
+진한 메인색 #1f1918
+rgba(31,25,24,00)
+
+중간 색 #8e8571
+rgba(142,133,113,00)
+
+연한 메인색 #f1e3c4
+rgba(241,227,196,00)
+
+summary h2 글자 #54423b
+
+
+
+참고 사이트 
+
+https://www.lahanhotels.com/index.do
+라한
+
+https://www.p-city.com/front
+파라다이스
+
+https://www.josunhotel.com/intro.do
+조선호텔앤리조트 
+
+
+0419~ 0429 호텔 사이트 제작 

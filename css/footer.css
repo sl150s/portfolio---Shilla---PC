@@ -1,0 +1,148 @@
+@import url(common.css);
+
+
+
+
+
+footer {
+    width: 100%;
+    background-color: #1f1918;
+    color: rgba(235,235,235,0.7);
+    
+}
+.footer_wrap {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 30px 0 50px;
+}
+
+
+
+
+
+
+
+
+/*    main_footer   */
+.main_footer {
+    border-bottom: 1px solid #f1e3c4;
+    padding: 0 0 30px;
+    margin: 0 0 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.main_footer>div {
+    float: left;
+}
+.footer_logo {
+    width: 15%;
+}
+
+.phone_number {
+    width: 38%;
+}
+.phone_number dl {
+    width: 44%;
+    display: inline-block;
+    margin-bottom: 5px;
+} 
+.phone_number dt {
+    display: inline-block;
+    width: 40%;
+}
+.phone_number dd {
+    display: inline-block;
+    width: 55%;
+}
+
+.introduction {
+    width: 35%;
+}
+.introduction li {
+    margin-bottom: 5px;
+}
+.introduction li a{
+    padding: 0 10px;
+    position: relative;
+}
+.introduction li a:after{
+    content: '';
+    position: absolute;
+    top: 7px;
+    right:0;
+    width: 1px;
+    height: 8px;
+    background: rgba(241,227,196,0.7);
+}
+.introduction li a:first-child{
+    padding-left: 0;
+}
+.introduction li a:last-child:after{
+    display: none;
+}
+
+.sns h4 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sns .sns_box a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* sns 아이콘 */
+.sns .sns_box a:nth-of-type(1){
+    background: url(../image/sns_icon_1.png) no-repeat;
+    background-size: cover;
+}
+.sns .sns_box a:nth-of-type(2){
+     background: url(../image/sns_icon_2.png) no-repeat;
+    background-size: cover;
+}
+.sns .sns_box a:nth-of-type(3){
+    background: url(../image/sns_icon_3.png) no-repeat;
+    background-size: cover;
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
+/*    address    */
+address {
+    font-style: normal;
+}
+address>ul{
+    margin-bottom: 20px;
+}
+address>ul>li {
+    float: left;
+}
+address>ul>li a{
+    display: block;
+    padding: 0 15px;
+    font-weight: 400;
+}
+address dl,
+address p {
+    font-size: 13px;
+    color: rgba(235,235,235,0.4);
+}
+address dt,
+address dd,
+address div {
+    display: inline-block;
+}
+address dd {padding-right: 10px};
+
+
+
+

@@ -1,0 +1,316 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800;900&display=swap');
+
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*header_______________________________________________________*/
+header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+}
+.header_wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+
+/*로고*/
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+.logo a{
+    display: block;
+    width: 150px;
+}
+.logo img {
+    width: 100%;
+}
+
+
+/*올 메뉴 버튼 */
+.menu_btn {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+.menu_btn span {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+}
+.menu_btn:before,
+.menu_btn:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+     transition:all 0.3s;
+}
+.menu_btn:before { transform: translateY(10px)}
+.menu_btn:after { transform: translateY(20px)}
+
+/*jquery에서 불러낼 클래스 "menu-open" */
+.menu_btn.menu-open:before{transform: translateY(0px) rotate(135deg);}
+.menu_btn.menu-open:after{transform:translateY(0px) rotate(-135deg);}
+.menu_btn.menu-open span{opacity:0;}  /*가로선3개중 가운데선*/
+
+
+
+
+/* 헤더 올 메뉴(모달창)*/
+.all_menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+}
+.all_menu:after{
+    content: '';
+    position: absolute;
+    top: 460px;
+    width: 100%;
+    height: 1px;
+    background: rgba(235,235,235,0.5);
+}
+.all_menu_wrap {
+    position: absolute;
+    left: 50%;
+    top: 410px;
+    width: 1000px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.all_menu_wrap dl {
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+.all_menu_wrap dl:hover {
+    border-bottom: 3px solid rgba(235,235,235,0.3);
+}
+.all_menu_wrap dl:hover dt{
+    color: #f1e3c4;
+}
+.all_menu_wrap dl dd:hover {
+     color: #f1e3c4;
+    font-weight: 500;
+}
+.all_menu_wrap dl dt {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    width: 180px;
+    margin: 0 auto 40px;
+}
+.all_menu_wrap dl dd{
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+/*main_______________________________________________________*/
+
+main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+main:after{
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 2px;
+    background-color: #fff;
+}
+
+
+/*비쥬얼 이미지 가운데 텍스트*/
+.visual_txt li .Vtext {
+    position: absolute;
+    top: 430px;
+    text-align: center;
+    transform: translateY(120px);
+    width: 100%;
+    color: #fff;
+    opacity: 0;
+    transition: all 1s;
+    z-index: 20;
+}
+.visual_txt li .Vtext.txtEmp {  /*제이쿼리에서 불러오기 */
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 1.7s;
+}
+.visual_txt li .Vtext strong {
+    display: inline-block;
+    padding:  0 0 0 30px; 
+    border: 1px solid #fff;
+    font-weight: 300;
+    letter-spacing: 30px;
+    box-shadow: 0px 0px 2px #fff;
+    text-shadow: 0px 0px 2px #fff;
+}
+.visual_txt li .Vtext h2 {
+    font-size: 50px;
+    letter-spacing: 15px;
+    font-weight: 800;
+    font-family: 'Bodoni Moda', serif;
+    text-shadow: 0px 0px 8px #000;
+    margin-top: 10px;
+} 
+.visual_txt li .Vtext p {
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px #000;
+    letter-spacing: 6px;
+}
+
+
+
+/* 비쥬얼 이미지*/
+
+.visual_img li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(1.2);
+    transition: all 0.8s;
+    opacity: 0;
+}
+.visual_img li.imgEmp { /*제이쿼리에서 불러냄*/
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1.4s;
+}
+.visual_img li.main0 {
+    background: url(../image/visual_1.png) no-repeat fixed center center; 
+     background-size: cover;
+}
+.visual_img li.main1 {
+    background: url(../image/visual_2.png) no-repeat fixed center center;
+     background-size: cover;
+}
+.visual_img li.main2 {
+    background: url(../image/visual_3.png) no-repeat fixed center center;
+     background-size: cover;
+}
+
+
+
+
+/* 비쥬얼 하단 메뉴들 */
+.foot_menu {}
+.foot_menu > ul {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    color: #fff;
+}
+.foot_menu .tit {
+    margin-bottom: 10px;
+    
+}
+.foot_menu .tit > a{
+    font-size: 22px;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    letter-spacing: -1px;
+}
+.foot_menu .tit>a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #8e8571;
+    transition: all 0.5s;
+}
+.foot_menu .tit:hover>a:after {
+    width: 100%;
+}
+.Taction { /*제이쿼리에서 불러올 클래스*/
+    color: #8e8571;
+}
+
+.foot_menu .tit > ul {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 14px;
+    font-weight: 300;
+    opacity: 0; /* 서브메뉴들 보이기*/
+}
+.foot_menu .tit > ul > li {
+    display: inline-block;
+    margin-right: 7px;
+}
+.foot_menu .tit > ul > li:hover {
+    color: #f1e3c4;
+}
+
+
+
+/* 비쥬얼 버튼 */
+.visual_btn {
+    position: absolute;
+    bottom: 70px;
+    right: 60px;
+}
+.visual_btn span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: rgba(241,227,196,0.3);
+    border-radius: 3px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.visual_btn span.btnEmp {
+    width: 35px;
+    background:rgba(241,227,196,1);
+}
+
+
+
+

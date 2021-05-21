@@ -1,0 +1,182 @@
+@import url(common.css);
+
+
+
+/*________________________________header 공통부분*/
+header{
+    min-width: 1280px;
+    height: 80px;
+    background: #f1e3c4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+header:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background: #1f1918;
+    transition: all 1s;
+    opacity: 0;
+}
+.header_wrap {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+.logo {
+    float: left;
+    padding: 30px 30px 10px 20px;
+}
+nav {
+    float: left;
+    position: relative;
+    z-index: 10;
+}
+.gnb>li {
+    float: left;
+    width: 130px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+}
+.gnb>li:hover>a {
+    border-bottom: 3px solid #fff;
+}
+
+.gnb>li>a{ /*메인메뉴*/
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #1e1817;
+}
+
+/*서브메뉴*/
+.gnb .lnb {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 130px;
+    height: 200px;
+    z-index: 20;
+}
+.gnb li:hover .lnb{
+    background:#000;
+}
+.gnb .lnb>li {
+    width: 130px;
+    padding: 10px 0;
+}
+.gnb .lnb>li a{
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    font-weight: 200;
+}
+.gnb .lnb>li:hover a {
+    color: bisque;
+    font-weight: 400;
+}
+.bg_box{ /*서브메뉴 배경(.gnb)*/
+    display:none;
+    height: 200px;
+    background:#1f1918;
+}
+.nav_img{  /*모든 이미지를 한 위치에 겹쳐놓음*/
+	display:none;
+	/*position:absolute;
+	top:125px;
+	left:10px;
+	z-index:1000;*/
+}
+
+
+
+
+
+/*top_link (head의 링크메뉴)*/
+
+.top_link {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+.top_link a:hover{
+    font-weight: 400;
+}
+
+.util_menu {
+    margin-right: 107px;
+}
+.util_menu li{
+    float: left;
+    position: relative;
+}
+.util_menu li a {
+    display: block;
+    padding: 10px 15px;
+}
+.util_menu li a:before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    background: #1f1918;
+}
+.global_box {
+    float: right;
+    width: 107px;
+}
+.global_box>a{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+}
+.global_box span:first-child {
+    vertical-align: middle;
+    font-size: 16px;
+}
+.global_box span:last-child {
+    vertical-align:middle;
+    font-size: 16px;
+}
+
+/*글로벌박스 클릭시 나오는 메뉴*/
+.global_box ul{
+    display:none;
+    width: 100px;
+    height: 80px;
+    background: #736a57;
+}
+.global_box ul li{
+    height: 40px;
+    line-height: 40px;
+}
+.global_box ul li a{
+    display: block;
+    padding-left: 37px;
+    color: #fff;
+}
+.global_box ul li>.mclose{ /*제이쿼리에서 불러올 클래스*/
+    display: block;
+    width: 107px;
+    padding: 10px 15px;
+    background: #000;
+}
+
+
+/*__________________________________// header 끝 */
+
+
+
+
+
